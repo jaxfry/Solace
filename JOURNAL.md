@@ -4,3 +4,11 @@ author: "Jaxon"
 description: "A DIY Braun DN40-inspired alarm clock that’s also a LifeLog Satellite and smart speaker."
 created_at: "2025-06-28"
 ---
+# 28 June 2025 - Project Kick-off (3 Hours)
+- Drafted project goals and some technical details
+- Flashed Raspberry Pi 3 for testing
+- Sucsessfully got display to connect
+- Got flutter set up and demo working
+- Set up dev enviroment on macbook
+- Started Learning Flutter Basics
+- Started UI layout thinking
