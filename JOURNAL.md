@@ -12,3 +12,5 @@ created_at: "2025-06-28"
 - Set up dev enviroment on macbook
 - Started Learning Flutter Basics
 - Started UI layout thinking
+# 29 June 2025 - Components Research (1 hour)
+- I've started to solidify what components I'm going to choose and I'll make a BOM soon!
