@@ -16,4 +16,4 @@ created_at: "2025-06-28"
 - I've started to solidify what components I'm going to choose and I'll make a BOM soon!
 # 29 June 2025 - Design sketch (30 mins)
 - Just sketched a design and wrote about Solace and LifeLog.
-![https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg?raw=true]
+!(https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg)
