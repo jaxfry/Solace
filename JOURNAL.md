@@ -17,3 +17,5 @@ created_at: "2025-06-28"
 # 29 June 2025 - Design sketch (30 mins)
 - Just sketched a design and wrote about Solace and LifeLog.
 ![notebook](https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg)
+# 30 June 2025 - Design Case (30 mins)
+Today I designed two iterations of the case, just a very early testing stage with some broken screen and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display...
