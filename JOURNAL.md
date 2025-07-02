@@ -19,3 +19,5 @@ created_at: "2025-06-28"
 ![notebook](https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg)
 # 30 June 2025 - Design Case (3 hours)
 Today I designed two iterations of the case all while rembering how to use fusion, just a very early testing stage with some broken screen and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display...
+# 1 July 2025 - Design Case (1 hour)
+- Worked on the UI
