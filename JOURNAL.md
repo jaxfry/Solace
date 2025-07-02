@@ -23,3 +23,8 @@ Today I designed two iterations of the case all while rembering how to use Fusio
 # 1 July 2025 - UI Implementation (1 hour)
 - Today I was limited on time, but I tested different fonts, spacing, and colors. I also added some nice color gradents depending on what time of day it is. Tomorrow I plan to add pages to the UI, and hook it into the LifeLog API!
 ![UI](https://hc-cdn.hel1.your-objectstorage.com/s/v3/204a3b8548ccc160edd3fd8c15deb6d1d7d675bf_img_3978.jpeg)
+# 1 July into 2 July - Picking Parts, CAD, and Research (past mid-might, 4 hours)
+I stayed up until at least 1am doing this. I'm tired.
+- I realized I knew very little about the audio world, but through research I figured out that your enclosure size maters when picking a speaker. As a result of this I had to ensure that it would still sound good in my case. I've decided on the PLS-P830985 as it's budget friendly and small enough to fit inside my project. I found a better alternitive, but it was $100, out of my budget.
+- On the cad design, I fixed some minor issues like some mis-alignments.
+- Made progress on the BOM!
