@@ -21,5 +21,5 @@ created_at: "2025-06-28"
 Today I designed two iterations of the case all while rembering how to use Fusion 360, just a very early testing stage with some broken screen (honestly might be a safty hazard if it wasn't hidden by the case) and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display...
 ![Case Prototype](https://hc-cdn.hel1.your-objectstorage.com/s/v3/204a3b8548ccc160edd3fd8c15deb6d1d7d675bf_img_3978.jpeg)
 # 1 July 2025 - UI Implementation (1 hour)
-- Today I was limited on time, but I tested different fonts, spacing, and colors. Tomorrow I plan to add pages to the UI, and hook it into the LifeLog API!
+- Today I was limited on time, but I tested different fonts, spacing, and colors. I also added some nice color gradents depending on what time of day it is. Tomorrow I plan to add pages to the UI, and hook it into the LifeLog API!
 ![UI](https://hc-cdn.hel1.your-objectstorage.com/s/v3/204a3b8548ccc160edd3fd8c15deb6d1d7d675bf_img_3978.jpeg)
