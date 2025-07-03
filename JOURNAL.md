@@ -10,15 +10,15 @@ created_at: "2025-06-28"
 - Sucsessfully got display to connect
 - Got flutter set up and demo working
 - Set up dev enviroment on macbook
-- Started Learning Flutter Basics
-- Started UI layout thinking
+- Started (re)Learning Flutter Basics
+- Started thinking about the layout of the UI
 # 29 June 2025 - Components Research (1 hour)
-- I've started to solidify what components I'm going to choose and I'll make a BOM soon!
+I was researching different types of displays, but ended up deciding upon a standard raspberry pi display after much concideration for a nice AMOLED screen, it's just too expensive. I'll make a BOM soon!
 # 29 June 2025 - Design sketch (30 mins)
 - Just sketched a design and wrote about Solace and LifeLog.
 ![notebook](https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg)
 # 30 June 2025 - Design Prototype Case (3 hours)
-Today I designed two iterations of the case all while rembering how to use Fusion 360, just a very early testing stage with some broken screen (honestly might be a safty hazard if it wasn't hidden by the case) and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display...
+Today I designed two iterations of the case all while rembering how to use Fusion 360, just a very early testing stage with some broken screen (honestly might be a safty hazard if it wasn't hidden by the case) and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display... I know, I started concidering the OLED screens again.
 ![Case Prototype](https://hc-cdn.hel1.your-objectstorage.com/s/v3/9558a9376349096f5571a5a9b8c74ab3ac5a25d3_img_3977.jpeg)
 # 1 July 2025 - UI Implementation (1 hour)
 - Today I was limited on time, but I tested different fonts, spacing, and colors. I also added some nice color gradents depending on what time of day it is. Tomorrow I plan to add pages to the UI, and hook it into the LifeLog API!
@@ -26,5 +26,8 @@ Today I designed two iterations of the case all while rembering how to use Fusio
 # 1 July into 2 July - Picking Parts, CAD, and Research (past mid-might, 4 hours)
 I stayed up until at least 1am doing this. I'm tired.
 - I realized I knew very little about the audio world, but through research I figured out that your enclosure size maters when picking a speaker. As a result of this I had to ensure that it would still sound good in my case. I've decided on the PLS-P830985 as it's budget friendly and small enough to fit inside my project. I found a better alternitive, but it was $100, out of my budget.
-- On the cad design, I fixed some minor issues like some mis-alignments.
+- On the cad design, I fixed some minor issues like some misalignments.
 - Made progress on the BOM!
+# 2 July - Finalizing BOM and Research (3.5 hours)
+Today we went to a water park, so I had tons of time in the car and when I got home to work on the project.
+Displays and Pis are crazy expensive, good thing I already have the display!
