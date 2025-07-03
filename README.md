@@ -1,35 +1,20 @@
+# Solace
+## Description
+**What is Solace?**
+
+Solace is a physical extension of [LifeLog](https://github.com/jaxfry/LifeLog) that collects real-world data, displays real-time insights and statistics, and includes a voice assistant that integrates with the LifeLog system.
+
 ---
-title: "Solus"
-author: "Jaxon"
-description: "A DIY Braun DN40-inspired alarm clock that’s also a LifeLog Satellite and smart speaker."
-created_at: "2025-06-28"
+## Why I Made This
+I wanted to create a physical device to complement the LifeLog system, providing a way to collect data from the real world and display data right beside my bed. I also wanted to create a voice assistant, just for fun, but it does add functionality to the device.
 ---
-# 28 June 2025 - Project Kick-off (3 Hours)
-- Drafted project goals and some technical details
-- Flashed Raspberry Pi 3 for testing
-- Sucsessfully got display to connect
-- Got flutter set up and demo working
-- Set up dev enviroment on macbook
-- Started (re)Learning Flutter Basics
-- Started thinking about the layout of the UI
-# 29 June 2025 - Components Research (1 hour)
-I was researching different types of displays, but ended up deciding upon a standard raspberry pi display after much concideration for a nice AMOLED screen, it's just too expensive. I'll make a BOM soon!
-# 29 June 2025 - Design sketch (30 mins)
-- Just sketched a design and wrote about Solace and LifeLog.
-![notebook](https://github.com/jaxfry/Solace/blob/main/assets/IMG_3976.jpeg)
-# 30 June 2025 - Design Prototype Case (3 hours)
-Today I designed two iterations of the case all while rembering how to use Fusion 360, just a very early testing stage with some broken screen (honestly might be a safty hazard if it wasn't hidden by the case) and stuff I've got laying around. I plan to redesign it to fit what ever display I end up choosing. On that note, I've got almost all of the components picked out except the display... I know, I started concidering the OLED screens again.
-![Case Prototype](https://hc-cdn.hel1.your-objectstorage.com/s/v3/9558a9376349096f5571a5a9b8c74ab3ac5a25d3_img_3977.jpeg)
-# 1 July 2025 - UI Implementation (1 hour)
-- Today I was limited on time, but I tested different fonts, spacing, and colors. I also added some nice color gradents depending on what time of day it is. Tomorrow I plan to add pages to the UI, and hook it into the LifeLog API!
-![UI](https://hc-cdn.hel1.your-objectstorage.com/s/v3/204a3b8548ccc160edd3fd8c15deb6d1d7d675bf_img_3978.jpeg)
-# 1 July into 2 July - Picking Parts, CAD, and Research (past mid-might, 4 hours)
-I stayed up until at least 1am doing this. I'm tired.
-- I realized I knew very little about the audio world, but through research I figured out that your enclosure size maters when picking a speaker. As a result of this I had to ensure that it would still sound good in my case. I've decided on the PLS-P830985 as it's budget friendly and small enough to fit inside my project. I found a better alternitive, but it was $100, out of my budget.
-- On the cad design, I fixed some minor issues like some misalignments.
-- Made progress on the BOM!
-# 2 July - Finalizing BOM and Research (3.5 hours)
-Today we went to a water park, so I had tons of time in the car and when I got home to work on the project.
+## Project Pictures
+### 3D Model
+![3D Model](https://hc-cdn.hel1.your-objectstorage.com/s/v3/e71c8c8a9725e7f2e04a51640a288c6fe2bac134_cleanshot_2025-07-03_at_15.13.48_2x.png)
+### Wiring Diagram
+![Wiring Diagram](https://hc-cdn.hel1.your-objectstorage.com/s/v3/e425a5f31b265cfcda28de4039f361293901b0a0_circuit_image__1_.png)
+Please note that I used a generic buck converter in the diagram, but in the actual device I use a specific one.
+### BOM
 |Part Name                                            |Quantity|Price (CAD)        |Description                                                                                  |Link                                                                                                            |
 |-----------------------------------------------------|--------|-------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |PLS-P830985                                          |1       |$30.65             |Speaker                                                                                      |https://www.digikey.ca/en/products/detail/peerless-by-tymphany/PLS-P830985/6211132                              |
@@ -58,7 +43,3 @@ Today we went to a water park, so I had tons of time in the car and when I got h
 |FIT0585                                              |1       |$4.55              |18 AWG Wire                                                                                  |https://www.digikey.ca/en/products/detail/dfrobot/FIT0585/9559254?gQT=1                                         |
 |MMOBIEL 20 Gauge Electrical Wire Parallel - 20 AWG   |1       |$11.49             |20 AWG Wire                                                                                  |https://www.amazon.ca/MMOBIEL-Gauge-Electrical-Wire-Parallel/dp/B0DGV5V2SM                                      |
 |4397                                                 |1       |$1.38              |STEMMA/Qwiic cable                                                                           |https://www.digikey.ca/en/products/detail/adafruit-industries-llc/4397/10824270                                 |
-
-Everything is crazy expensive :sob:, good thing I already have the display and pi!
-# 3 July - Completed BOM (1 hour)
-I completed the BOM, and now I'm going to finalize the case design and finish the code.
