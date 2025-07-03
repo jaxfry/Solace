@@ -47,4 +47,5 @@ Today we went to a water park, so I had tons of time in the car and when I got h
 | 4698                             | 1        | $23.24      | Color Light Sensor                              | [Digikey](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/4698/13162109) |
 | LSYGXYZ 6 Pieces Acrylic Rods    | 1        | $8.99       | Acrylic rods to have the light sensor inside the case | [Amazon](https://www.amazon.ca/LSYGXYZ-Acrylic-Decorations-Gardening%EF%BC%883mm-Diameter%EF%BC%89/dp/B09M846847/) |
 | **Total**                        |          | **$365.23 CAD** |                                                  |                                                                      |
+
 Displays and Pis are crazy expensive, good thing I already have the display!
