@@ -1,0 +1,7 @@
+pvporcupine
+pyaudio
+pvrecorder
+numpy
+whisper
+pyttsx3
+google.genai
