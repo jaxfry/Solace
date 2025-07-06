@@ -22,7 +22,7 @@ I wanted to create a physical device to complement the LifeLog system, providing
 
 ### Wiring Diagram
 
-![Wiring Diagram](https://hc-cdn.hel1.your-objectstorage.com/s/v3/e425a5f31b265cfcda28de4039f361293901b0a0_circuit_image__1_.png)
+![Wiring Diagram](https://hc-cdn.hel1.your-objectstorage.com/s/v3/94208fc16c89ac5b3baafca2eabae22fe82fc5b8_cleanshot_2025-07-06_at_00.52.57_2x.png)
 
 Please note that I used a generic buck converter in the diagram, but in the actual device I use a specific one.
 

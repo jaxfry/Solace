@@ -4,7 +4,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:solace_ui/card_widget.dart';
+import 'card_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       vsync: this,
     );
 
-    _cards = [
+    _cards = <Widget>[
       const CardWidget(
         title: 'Top Project',
         child: Center(
@@ -62,12 +62,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
     ];
 
-    _cardControllers = List.generate(_cards.length, (index) {
+    _cardControllers = List.generate(_cards.length, (int index) {
       return AnimationController(duration: const Duration(milliseconds: 800), vsync: this);
     });
 
-    _cardAnimations = List.generate(_cards.length, (index) {
-      final delay = index * 0.15;
+    _cardAnimations = List.generate(_cards.length, (int index) {
+      final double delay = index * 0.15;
       return Tween<Offset>(begin: Offset.zero, end: const Offset(0, 2.5)).animate(
         CurvedAnimation(
           parent: _cardControllers[index],
@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
     });
 
-    _cardOpacityAnimations = List.generate(_cards.length, (index) {
-      final delay = index * 0.15;
+    _cardOpacityAnimations = List.generate(_cards.length, (int index) {
+      final double delay = index * 0.15;
       return Tween<double>(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(
           parent: _cardControllers[index],
@@ -86,8 +86,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
     });
 
-    _cardBlurAnimations = List.generate(_cards.length, (index) {
-      final delay = index * 0.15;
+    _cardBlurAnimations = List.generate(_cards.length, (int index) {
+      final double delay = index * 0.15;
       return Tween<double>(begin: 0.0, end: 8.0).animate(
         CurvedAnimation(
           parent: _cardControllers[index],
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   void _startAutoScroll() {
     _cardScrollTimer?.cancel();
-    _cardScrollTimer = Timer.periodic(const Duration(seconds: 15), (timer) {
+    _cardScrollTimer = Timer.periodic(const Duration(seconds: 15), (Timer timer) {
       _currentPage++;
       _pageController.animateToPage(
         _currentPage,
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   List<Color> _getGradientColors() {
     if (_isBedtime) {
-      return [const Color(0xFF0A0F1C), const Color(0xFF1A1F2E)];
+      return <Color>[const Color(0xFF0A0F1C), const Color(0xFF1A1F2E)];
     }
     final DateTime now = DateTime.now();
     final double timeDecimal = now.hour + (now.minute / 60.0);
@@ -221,7 +221,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     _inactivityTimer?.cancel();
     _pageController.dispose();
     _bedtimeController.dispose();
-    for (final controller in _cardControllers) {
+    for (final AnimationController controller in _cardControllers) {
       controller.dispose();
     }
     super.dispose();
@@ -229,8 +229,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final duration = const Duration(milliseconds: 1500);
-    final curve = Curves.easeInOut;
+    const Duration duration = Duration(milliseconds: 1500);
+    const Cubic curve = Curves.easeInOut;
 
     return Scaffold(
       body: AnimatedContainer(
@@ -245,7 +245,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ),
         child: SafeArea(
           child: Stack(
-            children: [
+            children: <Widget>[
               if (!_isBedtime)
                 Padding(
                   padding: const EdgeInsets.only(top: 100.0),
@@ -259,10 +259,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         });
                       },
                       itemBuilder: (BuildContext context, int index) {
-                        final cardIndex = index % _cards.length;
+                        final int cardIndex = index % _cards.length;
                         return AnimatedBuilder(
                           animation: _cardControllers[cardIndex],
-                          builder: (context, child) {
+                          builder: (BuildContext context, Widget? child) {
                             return Transform.translate(
                               offset:
                                   _cardAnimations[cardIndex].value *

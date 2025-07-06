@@ -3,10 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
+  const CardWidget({super.key, required this.title, required this.child});
   final String title;
   final Widget child;
-
-  const CardWidget({super.key, required this.title, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class CardWidget extends StatelessWidget {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               Text(
                 title,
                 style: const TextStyle(
