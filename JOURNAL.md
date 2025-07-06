@@ -62,3 +62,7 @@ Today we went to a water park, so I had tons of time in the car and when I got h
 Everything is crazy expensive :sob:, good thing I already have the display and pi!
 # 3 July - Completed BOM (1 hour)
 I completed the BOM, and now I'm going to finalize the case design and finish the code.
+# 5 July - Case Design, Parts Update, and Code (3 hours)
+- I added the speaker to the case design
+- updated the BOM to remove a few unnecessary parts.
+- I wrote a simple voice assistant that hooks into the Gemini API.
