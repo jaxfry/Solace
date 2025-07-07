@@ -1,8 +1,9 @@
 ---
-title: "Solus"
+title: "Solace"
 author: "Jaxon"
 description: "A DIY Braun DN40-inspired alarm clock that’s also a LifeLog Satellite and smart speaker."
 created_at: "2025-06-28"
+total_time: "20 hours"
 ---
 # 28 June 2025 - Project Kick-off (3 Hours)
 - Drafted project goals and some technical details
@@ -62,7 +63,9 @@ Today we went to a water park, so I had tons of time in the car and when I got h
 Everything is crazy expensive :sob:, good thing I already have the display and pi!
 # 3 July - Completed BOM (1 hour)
 I completed the BOM, and now I'm going to finalize the case design and finish the code.
-# 5 July - Case Design, Parts Update, and Code (3 hours)
+# 5 July - Case Design, Parts Update, and Code (3.5 hours)
 - I added the speaker to the case design
 - updated the BOM to remove a few unnecessary parts.
 - I wrote a simple voice assistant that hooks into the Gemini API.
+- Updated wiring diagram
+![3D Model Update](https://hc-cdn.hel1.your-objectstorage.com/s/v3/6df4d0566374887b4bf12c57420697144851c085_cleanshot_2025-07-06_at_01.19.42_2x.png)
