@@ -31,6 +31,7 @@ I stayed up until at least 1am doing this. I'm tired.
 - Made progress on the BOM!
 # 2 July - Finalizing BOM and Research (3.5 hours)
 Today we went to a water park, so I had tons of time in the car and when I got home to work on the project.
+*(OUTDATED BOM, SEE README.md)*
 |Part Name                                            |Quantity|Price (CAD)        |Description                                                                                  |Link                                                                                                            |
 |-----------------------------------------------------|--------|-------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |PLS-P830985                                          |1       |$30.65             |Speaker                                                                                      |https://www.digikey.ca/en/products/detail/peerless-by-tymphany/PLS-P830985/6211132                              |
