@@ -37,7 +37,7 @@ class CardWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Expanded(child: child),
+              Expanded(child: SingleChildScrollView(child: child)),
             ],
           ),
         ),

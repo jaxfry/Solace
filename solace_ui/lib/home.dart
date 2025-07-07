@@ -1,10 +1,20 @@
 import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'card_widget.dart';
+
+// Configuration for API
+class LifeLogConfig {
+  static String apiBaseUrl = 'http://192.168.1.75:8000'; // (My LifeLog API server running on a pi)
+  static String username =
+      'admin'; // Replace with your username and pass that you set up in LifeLog
+  static String password = 'admin123';
+}
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,12 +33,62 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   int _currentPage = 1000;
   bool _isBedtime = false;
 
-  late final List<Widget> _cards;
   late AnimationController _bedtimeController;
   late List<AnimationController> _cardControllers;
   late List<Animation<Offset>> _cardAnimations;
   late List<Animation<double>> _cardOpacityAnimations;
   late List<Animation<double>> _cardBlurAnimations;
+
+  String? _summary;
+
+  Future<String?> _getJwtToken(String username, String password) async {
+    final response = await http.post(
+      Uri.parse('${LifeLogConfig.apiBaseUrl}/api/v1/auth/token'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({'username': username, 'password': password}),
+    );
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body) as Map<String, dynamic>;
+      return data['access_token'] as String?;
+    }
+    return null;
+  }
+
+  Future<Map<String, dynamic>?> _fetchDailySummaryApi(String date, String jwt) async {
+    final response = await http.get(
+      Uri.parse('${LifeLogConfig.apiBaseUrl}/api/v1/day/$date'),
+      headers: {'Authorization': 'Bearer $jwt'},
+    );
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body) as Map<String, dynamic>;
+    }
+    return null;
+  }
+
+  Future<void> _fetchSummary() async {
+    setState(() {
+      _summary = null;
+    });
+    try {
+      final jwt = await _getJwtToken(LifeLogConfig.username, LifeLogConfig.password);
+      if (jwt == null) {
+        setState(() {
+          _summary = 'Failed to authenticate.';
+        });
+        return;
+      }
+      final today = DateTime.now();
+      final dateStr = DateFormat('yyyy-MM-dd').format(today);
+      final summaryData = await _fetchDailySummaryApi(dateStr, jwt);
+      setState(() {
+        _summary = summaryData?['summary']?['summary']?.toString() ?? 'No summary available.';
+      });
+    } catch (e) {
+      setState(() {
+        _summary = 'Error fetching summary.';
+      });
+    }
+  }
 
   @override
   void initState() {
@@ -41,32 +101,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       vsync: this,
     );
 
-    _cards = <Widget>[
-      const CardWidget(
-        title: 'Top Project',
-        child: Center(
-          child: Text('Solace UI - 42 hours', style: TextStyle(color: Colors.white, fontSize: 22)),
-        ),
-      ),
-      const CardWidget(
-        title: 'Second Project',
-        child: Center(
-          child: Text('Project 2 - 20 hours', style: TextStyle(color: Colors.white, fontSize: 22)),
-        ),
-      ),
-      const CardWidget(
-        title: 'Third Project',
-        child: Center(
-          child: Text('Project 3 - 10 hours', style: TextStyle(color: Colors.white, fontSize: 22)),
-        ),
-      ),
-    ];
-
-    _cardControllers = List.generate(_cards.length, (int index) {
+    _cardControllers = List.generate(1, (int index) {
       return AnimationController(duration: const Duration(milliseconds: 800), vsync: this);
     });
 
-    _cardAnimations = List.generate(_cards.length, (int index) {
+    _cardAnimations = List.generate(1, (int index) {
       final double delay = index * 0.15;
       return Tween<Offset>(begin: Offset.zero, end: const Offset(0, 2.5)).animate(
         CurvedAnimation(
@@ -76,7 +115,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
     });
 
-    _cardOpacityAnimations = List.generate(_cards.length, (int index) {
+    _cardOpacityAnimations = List.generate(1, (int index) {
       final double delay = index * 0.15;
       return Tween<double>(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(
@@ -86,7 +125,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
     });
 
-    _cardBlurAnimations = List.generate(_cards.length, (int index) {
+    _cardBlurAnimations = List.generate(1, (int index) {
       final double delay = index * 0.15;
       return Tween<double>(begin: 0.0, end: 8.0).animate(
         CurvedAnimation(
@@ -98,6 +137,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     _systemClockTimer = Timer.periodic(const Duration(seconds: 1), (Timer t) => _updateTime());
     _startAutoScroll();
+    _fetchSummary();
   }
 
   void _startAutoScroll() {
@@ -232,6 +272,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     const Duration duration = Duration(milliseconds: 1500);
     const Cubic curve = Curves.easeInOut;
 
+    final List<Widget> cards = [
+      CardWidget(
+        title: 'LifeLog Summary',
+        child: _summary == null
+            ? const Center(child: CircularProgressIndicator())
+            : Text(_summary!, style: const TextStyle(color: Colors.white, fontSize: 18)),
+      ),
+    ];
+
     return Scaffold(
       body: AnimatedContainer(
         duration: duration,
@@ -259,7 +308,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         });
                       },
                       itemBuilder: (BuildContext context, int index) {
-                        final int cardIndex = index % _cards.length;
+                        final int cardIndex = index % cards.length;
                         return AnimatedBuilder(
                           animation: _cardControllers[cardIndex],
                           builder: (BuildContext context, Widget? child) {
@@ -274,7 +323,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     sigmaX: _cardBlurAnimations[cardIndex].value,
                                     sigmaY: _cardBlurAnimations[cardIndex].value,
                                   ),
-                                  child: _cards[cardIndex],
+                                  child: cards[cardIndex],
                                 ),
                               ),
                             );
