@@ -18,7 +18,7 @@ I wanted to create a physical device to complement the LifeLog system, providing
 
 ### 3D Model
 
-![3D Model](https://hc-cdn.hel1.your-objectstorage.com/s/v3/e71c8c8a9725e7f2e04a51640a288c6fe2bac134_cleanshot_2025-07-03_at_15.13.48_2x.png)
+![3D Model](https://hc-cdn.hel1.your-objectstorage.com/s/v3/2b9eb8abc3eefa078e364038368a2c1ae50b5851_cleanshot_2025-07-08_at_13.30.27_2x.png)
 
 ### Wiring Diagram
 
