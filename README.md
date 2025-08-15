@@ -34,9 +34,9 @@ Please note that I used a generic buck converter in the diagram, but in the actu
 |Part Name                                            |Quantity|Price (CAD)|Description                                                         |Link                                                                                                |
 |-----------------------------------------------------|--------|-----------|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |PLS-P830985                                          |1       |$30.65     |Speaker                                                             |https://www.digikey.ca/en/products/detail/peerless-by-tymphany/PLS-P830985/6211132                  |
-|Raspberry Pi Touch Display V1                        |1       |$85.95     |7-inch touchscreen display for Raspberry Pi                         |https://www.amazon.ca/DAOKAI-TPA3118-Amplifier-Single-Channel/dp/B0BCK9ZRC4/                        |
+|Raspberry Pi Touch Display V1                        |1       |$85.95     |7-inch touchscreen display for Raspberry Pi                         |https://www.digikey.ca/en/products/detail/raspberry-pi/ASIN-B00X4WHP5E/6211133                      |
 |Raspberry Pi 4 2GB                                   |1       |$80.16     |Mini computer                                                       |https://www.amazon.ca/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TD42S27/                            |
-|DAOKAI 2Pcs TPA3118 Mono Amplifier Board             |1       |$19.95     |Audio amplifier for Raspberry Pi                                    |https://www.digikey.ca/en/products/detail/adafruit-industries-llc/1752/4990780                      |
+|DAOKAI TPA3118 Mono Amplifier Board                  |1       |$9.14      |Audio amplifier for Raspberry Pi                                    |https://www.amazon.ca/gp/product/B07SGK3VFS/                                                        |
 |TR9CE5000CCP-N(R6B)                                  |1       |$$30.66    |power supply                                                        |https://www.digikey.ca/en/products/detail/mean-well-usa-inc/GST60A12-P1J/7703712                    |
 |PJ-037AH                                             |1       |$1.01      |Power Jack                                                          |https://www.digikey.ca/en/products/detail/same-sky-formerly-cui-devices/PJ-037AH/1644547            |
 |USB Mini Mic                                         |1       |$6.99      |USB microphone for audio input                                      |https://www.amazon.ca/Mini-Microphone-Skype-Desktop-Laptop/dp/B076BC2Y3W/                           |
@@ -56,6 +56,7 @@ Please note that I used a generic buck converter in the diagram, but in the actu
 |FIT0585                                              |1       |$4.55      |18 AWG Wire                                                         |https://www.digikey.ca/en/products/detail/dfrobot/FIT0585/9559254?gQT=1                             |
 |uxcell                                               |1       |$6.75      |M4*12 screws for speaker                                            |https://www.amazon.ca/gp/product/B0F1YR73PB/                                                        |
 |Total                                                |        |$328.94    |                                                                    |                                                                                                    |
+
 
 ### Final Product Pictures
 ![Final Product](https://hc-cdn.hel1.your-objectstorage.com/s/v3/f3e7e89f0f9093afc290d6db3b98a75e148a24c3_img_4138.jpeg)
