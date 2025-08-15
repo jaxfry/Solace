@@ -77,3 +77,4 @@ I completed the BOM, and now I'm going to finalize the case design and finish th
 # 13 August - Final Assembly and slight rewrite of the entire code! (4 hours)
 - I finished the code for the voice assistant, and it works!
 - YAY!
+- Check readme for the final pictures :) I think it turned out great!

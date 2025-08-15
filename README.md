@@ -1,5 +1,5 @@
 # Solace
-
+![Solace Build](https://hc-cdn.hel1.your-objectstorage.com/s/v3/b1d7d9f75eed66be460fd089f704f1a9c68dcea9_img_4140_medium.jpeg)
 ## Description
 
 **What is Solace?**
@@ -52,3 +52,6 @@ Please note that I used a generic buck converter in the diagram, but in the actu
 |FIT0585                                              |1       |$4.55      |18 AWG Wire                                                         |https://www.digikey.ca/en/products/detail/dfrobot/FIT0585/9559254?gQT=1                             |
 |uxcell                                               |1       |$6.75      |M4*12 screws for speaker                                            |https://www.amazon.ca/gp/product/B0F1YR73PB/                                                        |
 |Total                                                |        |$328.94    |                                                                    |                                                                                                    |
+
+### Final Product Pictures
+![Final Product](https://hc-cdn.hel1.your-objectstorage.com/s/v3/f3e7e89f0f9093afc290d6db3b98a75e148a24c3_img_4138.jpeg)
