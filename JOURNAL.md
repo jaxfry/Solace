@@ -3,7 +3,9 @@ title: "Solace"
 author: "Jaxon"
 description: "A DIY Braun DN40-inspired alarm clock that’s also a LifeLog Satellite and smart speaker."
 created_at: "2025-06-28"
-total_time: "20 hours"
+total_design_time: "20 hours"
+total_build_time: "~11 hours"
+total_time: "~31 hours"
 ---
 # 28 June 2025 - Project Kick-off (3 Hours)
 - Drafted project goals and some technical details
@@ -74,7 +76,9 @@ I completed the BOM, and now I'm going to finalize the case design and finish th
 - I soldered everything! Not much more to say then that.
 - I thought it wasn't working, but I forgot I made it so that past 10pm it would dim the display a lot and the viewing angle is terrible so I couldn't see it. :skull:
 - Need to modify the voice assistant code.
-# 13 August - Final Assembly and slight rewrite of the entire code! (4 hours)
+# 12 August - Solder everything 100% (2 hours)
+- I soldered the speaker, the power jack, pi, dc-dc converter, JUST everything!
+# 13 August - Final Assembly and rewrite of the entire code! (5 hours)
 - I finished the code for the voice assistant, and it works!
 - YAY!
 - Check readme for the final pictures :) I think it turned out great!
