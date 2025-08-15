@@ -42,22 +42,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   String? _summary;
 
   Future<String?> _getJwtToken(String username, String password) async {
-    final response = await http.post(
+    final http.Response response = await http.post(
       Uri.parse('${LifeLogConfig.apiBaseUrl}/api/v1/auth/token'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'username': username, 'password': password}),
+      headers: <String, String>{'Content-Type': 'application/json'},
+      body: jsonEncode(<String, String>{'username': username, 'password': password}),
     );
     if (response.statusCode == 200) {
-      final data = jsonDecode(response.body) as Map<String, dynamic>;
+      final Map<String, dynamic> data = jsonDecode(response.body) as Map<String, dynamic>;
       return data['access_token'] as String?;
     }
     return null;
   }
 
   Future<Map<String, dynamic>?> _fetchDailySummaryApi(String date, String jwt) async {
-    final response = await http.get(
+    final http.Response response = await http.get(
       Uri.parse('${LifeLogConfig.apiBaseUrl}/api/v1/day/$date'),
-      headers: {'Authorization': 'Bearer $jwt'},
+      headers: <String, String>{'Authorization': 'Bearer $jwt'},
     );
     if (response.statusCode == 200) {
       return jsonDecode(response.body) as Map<String, dynamic>;
@@ -70,16 +70,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       _summary = null;
     });
     try {
-      final jwt = await _getJwtToken(LifeLogConfig.username, LifeLogConfig.password);
+      final String? jwt = await _getJwtToken(LifeLogConfig.username, LifeLogConfig.password);
       if (jwt == null) {
         setState(() {
           _summary = 'Failed to authenticate.';
         });
         return;
       }
-      final today = DateTime.now();
-      final dateStr = DateFormat('yyyy-MM-dd').format(today);
-      final summaryData = await _fetchDailySummaryApi(dateStr, jwt);
+      final DateTime today = DateTime.now();
+      final String dateStr = DateFormat('yyyy-MM-dd').format(today);
+      final Map<String, dynamic>? summaryData = await _fetchDailySummaryApi(dateStr, jwt);
       setState(() {
         _summary = summaryData?['summary']?['summary']?.toString() ?? 'No summary available.';
       });
@@ -272,7 +272,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     const Duration duration = Duration(milliseconds: 1500);
     const Cubic curve = Curves.easeInOut;
 
-    final List<Widget> cards = [
+    final List<Widget> cards = <Widget>[
       CardWidget(
         title: 'LifeLog Summary',
         child: _summary == null

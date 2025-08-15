@@ -70,3 +70,10 @@ I completed the BOM, and now I'm going to finalize the case design and finish th
 - I wrote a simple voice assistant that hooks into the Gemini API.
 - Updated wiring diagram
 ![3D Model Update](https://hc-cdn.hel1.your-objectstorage.com/s/v3/6df4d0566374887b4bf12c57420697144851c085_cleanshot_2025-07-06_at_01.19.42_2x.png)
+# 11 August - Start and almost finish assembling (4 hours)
+- I soldered everything! Not much more to say then that.
+- I thought it wasn't working, but I forgot I made it so that past 10pm it would dim the display a lot and the viewing angle is terrible so I couldn't see it. :skull:
+- Need to modify the voice assistant code.
+# 13 August - Final Assembly and slight rewrite of the entire code! (4 hours)
+- I finished the code for the voice assistant, and it works!
+- YAY!
