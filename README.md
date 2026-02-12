@@ -2,7 +2,7 @@
 
 # Solace
 
-![Solace Build](https://hc-cdn.hel1.your-objectstorage.com/s/v3/b1d7d9f75eed66be460fd089f704f1a9c68dcea9_img_4140_medium.jpeg)
+![Solace Build](assets/IMG_3976.jpeg)
 
 ## Description
 
