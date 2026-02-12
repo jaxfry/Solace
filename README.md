@@ -2,7 +2,7 @@
 
 # Solace
 
-![Solace Build](assets/IMG_3976.jpeg)
+![Solace Build](assets/IMG_4142\ Large.jpeg)
 
 ## Description
 
